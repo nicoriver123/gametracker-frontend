@@ -1,0 +1,181 @@
+/* --- Estilos para Auth.css --- */
+
+.auth-container {
+  /* min-height: calc(100vh - 70px); - Ya no necesitamos restar aquí, solo asegurarnos que es 100vh */
+  min-height: 100vh;
+  /* Aumento el padding-top para compensar la altura del Header fijo (aprox. 80px) 
+     más un espacio adicional para centrar verticalmente el formulario. */
+  padding-top: 120px; 
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding-bottom: 40px; /* Aseguramos un poco de padding inferior */
+}
+
+.auth-card {
+  border: none;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-title {
+  color: #333;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.auth-btn {
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.auth-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+}
+
+.auth-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.auth-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.auth-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.auth-link:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+.form-control {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.form-control.is-invalid {
+  border-color: #dc3545;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.invalid-feedback {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.google-auth-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.google-auth-container > div {
+  width: 100% !important;
+}
+
+.google-auth-container button {
+  width: 100% !important;
+  justify-content: center !important;
+  border-radius: 10px !important;
+  padding: 12px !important;
+  font-size: 1rem !important;
+}
+
+/* Alert customization */
+.alert {
+  border-radius: 10px;
+  border: none;
+}
+
+.alert-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .auth-container {
+    /* Mantiene el padding superior en dispositivos móviles para evitar que quede oculto */
+    padding: 100px 1rem 1rem 1rem; 
+  }
+
+  .auth-card .card-body {
+    padding: 2rem 1.5rem !important;
+  }
+
+  .auth-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Loading state */
+.auth-btn:disabled {
+  position: relative;
+  color: transparent;
+}
+
+.auth-btn:disabled::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Text size utility */
+.text-sm {
+  font-size: 0.875rem;
+}
