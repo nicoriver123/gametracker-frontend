@@ -1,0 +1,105 @@
+.carousel-container {
+  margin-top: 0;
+  padding-top: 0;
+  position: relative;
+}
+
+/* Evita espacio entre navbar y carousel */
+.carousel {
+  margin-top: 0;
+}
+
+/* Imagen del carousel */
+.carousel-image {
+  height: 85vh;
+  object-fit: cover;
+  filter: brightness(0.7); /* Oscurece un poco la imagen */
+}
+
+/* Overlay oscuro para mejorar legibilidad */
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+  z-index: 1;
+}
+
+/* Caption personalizado */
+.custom-caption {
+  z-index: 2;
+  background: rgba(0, 0, 0, 0);
+  padding: 30px 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Animaciones para el texto */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Título con animación - MÁS GRANDE Y CON BORDES */
+.carousel-caption h3.animated-title {
+  font-size: 3rem; /* Más grande */
+  font-weight: 800; /* Más grueso */
+  color: #f8b600;
+  text-shadow: 
+    3px 3px 6px rgba(0, 0, 0, 0.9),
+    -1px -1px 2px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(248, 182, 0, 0.5); /* Brillo dorado */
+  animation: slideDown 0.8s ease-out;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Texto con animación - MÁS GRANDE Y CON BORDES */
+.carousel-caption p.animated-text {
+  color: #fff;
+  font-size: 1.5rem; /* Más grande */
+  font-weight: 500;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.9),
+    -1px -1px 2px rgba(0, 0, 0, 0.8);
+  animation: slideDown 1s ease-out 0.3s both;
+  line-height: 1.6;
+}
+
+/* Asegura que la animación se repita al cambiar de slide */
+.carousel-item-next .carousel-caption h3,
+.carousel-item-prev .carousel-caption h3,
+.carousel-item.active .carousel-caption h3 {
+  animation: slideDown 0.8s ease-out;
+}
+
+.carousel-item-next .carousel-caption p,
+.carousel-item-prev .carousel-caption p,
+.carousel-item.active .carousel-caption p {
+  animation: slideDown 1s ease-out 0.3s both;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .carousel-caption h3.animated-title {
+    font-size: 2rem;
+  }
+  
+  .carousel-caption p.animated-text {
+    font-size: 1.1rem;
+  }
+  
+  .custom-caption {
+    padding: 20px;
+  }
+}
