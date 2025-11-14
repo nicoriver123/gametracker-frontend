@@ -1,0 +1,59 @@
+.comentario {
+  padding: 1rem;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  transition: all 0.2s ease;
+}
+
+.comentario:hover {
+  border-color: #dee2e6;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.comentario-principal {
+  position: relative;
+}
+
+.comentario .btn-link {
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0;
+}
+
+.comentario .btn-link:hover {
+  text-decoration: underline;
+}
+
+.respuestas {
+  position: relative;
+  padding-left: 1rem;
+  border-left: 2px solid #e9ecef;
+}
+
+.respuestas .comentario {
+  background: #f8f9fa;
+  margin-bottom: 0.75rem;
+}
+
+/* Badges */
+.badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .comentario {
+    padding: 0.75rem;
+  }
+  
+  .respuestas {
+    margin-left: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  
+  .comentario .d-flex.gap-3 {
+    gap: 0.5rem !important;
+  }
+}
