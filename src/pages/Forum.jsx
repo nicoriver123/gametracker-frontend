@@ -4,7 +4,7 @@ import { Container, Button, Form, InputGroup, Spinner, Alert } from "react-boots
 import forumService from "../api/forumService";
 import { useAuth } from "../context/useAuth";
 import toast from "react-hot-toast";
-import Footer from "../components/Footer/Footer"; // 👈 ya lo tienes importado
+import Footer from "../components/Footer/Footer"; 
 import "./css/Forum.css";
 
 function Forum() {

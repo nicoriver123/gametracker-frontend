@@ -71,12 +71,9 @@ function App() {
             <Route path="/reset-password/:token" element={<ResetPassword />} />
             <Route path="/games/category/:genre" element={<CategoryGames />} />
             <Route path="/games" element={<GlobalGamesList />} />
-<Route path="/contact" element={<Contact />} />
-
-
-
-<Route path="/games/:gameId/reviews" element={<GameReviews />} />
-<Route path="/reviews" element={<AllReviews />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/games/:gameId/reviews" element={<GameReviews />} />
+            <Route path="/reviews" element={<AllReviews />} />
             
              {/* 🔥 Rutas de Mi Biblioteca */}
             <Route 
@@ -143,8 +140,6 @@ function App() {
             />
             
          
-
-            {/* Agrega más rutas según necesites */}
           </Routes>
         </div>
       </AuthProvider>

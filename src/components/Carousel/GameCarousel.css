@@ -13,7 +13,7 @@
 .carousel-image {
   height: 85vh;
   object-fit: cover;
-  filter: brightness(0.7); /* Oscurece un poco la imagen */
+  filter: brightness(0.7); 
 }
 
 /* Overlay oscuro para mejorar legibilidad */
@@ -27,7 +27,7 @@
   z-index: 1;
 }
 
-/* Caption personalizado */
+
 .custom-caption {
   z-index: 2;
   background: rgba(0, 0, 0, 0);
@@ -52,19 +52,19 @@
 
 /* Título con animación - MÁS GRANDE Y CON BORDES */
 .carousel-caption h3.animated-title {
-  font-size: 3rem; /* Más grande */
-  font-weight: 800; /* Más grueso */
+  font-size: 3rem;
+  font-weight: 800; 
   color: #f8b600;
   text-shadow: 
     3px 3px 6px rgba(0, 0, 0, 0.9),
     -1px -1px 2px rgba(0, 0, 0, 0.8),
-    0 0 20px rgba(248, 182, 0, 0.5); /* Brillo dorado */
+    0 0 20px rgba(248, 182, 0, 0.5); 
   animation: slideDown 0.8s ease-out;
   margin-bottom: 20px;
   letter-spacing: 1px;
 }
 
-/* Texto con animación - MÁS GRANDE Y CON BORDES */
+
 .carousel-caption p.animated-text {
   color: #fff;
   font-size: 1.5rem; /* Más grande */
@@ -76,7 +76,7 @@
   line-height: 1.6;
 }
 
-/* Asegura que la animación se repita al cambiar de slide */
+
 .carousel-item-next .carousel-caption h3,
 .carousel-item-prev .carousel-caption h3,
 .carousel-item.active .carousel-caption h3 {

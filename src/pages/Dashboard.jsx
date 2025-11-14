@@ -1,4 +1,4 @@
-// pages/Dashboard.jsx
+
 import { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Spinner, Alert, Badge, ProgressBar } from 'react-bootstrap';
 import { FaGamepad, FaStar, FaClock, FaChartLine, FaTrophy, FaFire, FaBook, FaComments } from 'react-icons/fa';
