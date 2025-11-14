@@ -1,0 +1,564 @@
+/* pages/css/AllReviews.css */
+
+/* ============================================
+   CONTENEDOR PRINCIPAL
+============================================ */
+.all-reviews-page {
+  padding: 100px 20px 40px;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* ============================================
+   LOADING STATE
+============================================ */
+.reviews-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  color: #333;
+}
+
+.reviews-loading p {
+  margin-top: 15px;
+  color: #666;
+  font-size: 16px;
+}
+
+/* ============================================
+   FILTROS SIDEBAR
+============================================ */
+.filters-sidebar {
+  margin-bottom: 30px;
+}
+
+.filters-card {
+  background: white;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.sticky-filters {
+  position: sticky;
+  top: 100px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #667eea;
+}
+
+.filters-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.filters-title svg {
+  color: #667eea;
+}
+
+.clear-filters-btn {
+  color: #dc3545;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0;
+}
+
+.clear-filters-btn:hover {
+  color: #c82333;
+  text-decoration: underline;
+}
+
+.filter-label {
+  font-weight: 600;
+  color: #334155;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.filter-select {
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  padding: 10px 12px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.filter-select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Scroll personalizado para filtros */
+.sticky-filters::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sticky-filters::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.sticky-filters::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.sticky-filters::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ============================================
+   HEADER DE RESEÑAS
+============================================ */
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.reviews-count {
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+/* ============================================
+   TARJETAS DE RESEÑAS
+============================================ */
+.review-item {
+  background: white;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.review-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+.review-game-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+.game-link {
+  color: #1e293b;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.game-link:hover {
+  color: #667eea;
+}
+
+.review-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 8px;
+}
+
+.stars-rating {
+  display: flex;
+  gap: 3px;
+  font-size: 16px;
+}
+
+.star-filled {
+  color: #ffc107;
+  filter: drop-shadow(0 2px 4px rgba(255, 193, 7, 0.3));
+}
+
+.star-empty {
+  color: #e0e0e0;
+}
+
+.review-date {
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.recommendation-badge {
+  font-size: 13px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.review-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #475569;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.review-badges-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.review-badge {
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.reviewer {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.reviewer-name {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* ============================================
+   TOP 3 GAMES SECTION
+============================================ */
+.top-games-card {
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 100px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.sidebar-title {
+  font-weight: 700;
+  color: #1e293b;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.top-games-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.top-games-list li {
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.top-games-list li:hover {
+  transform: translateX(5px);
+}
+
+.top-game-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.top-game-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.top-game-img {
+  width: 60px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ranking-circle {
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+}
+
+.top-game-info h6 {
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.top-game-link:hover .top-game-info h6 {
+  color: #667eea;
+}
+
+.stars-small {
+  display: flex;
+  gap: 2px;
+  font-size: 12px;
+}
+
+/* ============================================
+   ALERTS
+============================================ */
+.all-reviews-page .alert {
+  border-radius: 15px;
+  border: 1px solid rgba(23, 162, 184, 0.3);
+  background: rgba(23, 162, 184, 0.08);
+  color: #0c5460;
+  padding: 20px;
+}
+
+/* ============================================
+   RESPONSIVE - TABLETS
+============================================ */
+@media (max-width: 992px) {
+  .all-reviews-page {
+    padding: 90px 15px 30px;
+  }
+
+  .page-title {
+    font-size: 28px;
+  }
+
+  .sticky-filters,
+  .top-games-card {
+    position: static;
+    max-height: none;
+  }
+
+  .filters-card {
+    margin-bottom: 20px;
+  }
+
+  .reviews-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+============================================ */
+@media (max-width: 768px) {
+  .all-reviews-page {
+    padding: 85px 10px 25px;
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+
+  .filters-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .review-game-title {
+    font-size: 18px;
+  }
+
+  .review-text {
+    font-size: 14px;
+  }
+
+  .review-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .recommendation-badge {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .top-game-img {
+    width: 50px;
+    height: 70px;
+  }
+
+  .ranking-circle {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE PEQUEÑO
+============================================ */
+@media (max-width: 576px) {
+  .page-title {
+    font-size: 20px;
+  }
+
+  .filters-card .card-body {
+    padding: 15px;
+  }
+
+  .filter-label {
+    font-size: 13px;
+  }
+
+  .filter-select {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .review-item .card-body {
+    padding: 15px;
+  }
+
+  .review-game-title {
+    font-size: 16px;
+  }
+
+  .stars-rating {
+    font-size: 14px;
+  }
+
+  .review-text {
+    font-size: 13px;
+  }
+
+  .review-badge {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  .reviewer-name {
+    font-size: 13px;
+  }
+
+  .top-games-card .card-body {
+    padding: 15px;
+  }
+
+  .sidebar-title {
+    font-size: 16px;
+  }
+
+  .top-game-info h6 {
+    font-size: 13px;
+  }
+
+  .reviews-count {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+/* ============================================
+   ANIMACIONES
+============================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.review-item {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* ============================================
+   ESTADOS HOVER MEJORADOS
+============================================ */
+.filter-select:hover {
+  border-color: #94a3b8;
+}
+
+.review-badge:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+/* ============================================
+   SCROLL SUAVE
+============================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================================
+   BADGES PERSONALIZADOS
+============================================ */
+.badge.bg-info {
+  background-color: #17a2b8 !important;
+}
+
+.badge.bg-secondary {
+  background-color: #6c757d !important;
+}
+
+.badge.bg-success {
+  background-color: #28a745 !important;
+}
+
+.badge.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+.badge.bg-warning {
+  background-color: #ffc107 !important;
+  color: #333 !important;
+}
+
+.badge.bg-primary {
+  background-color: #667eea !important;
+}

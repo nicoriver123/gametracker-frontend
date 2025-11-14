@@ -1,0 +1,754 @@
+/* pages/css/MyLibrary.css */
+
+/* ============================================
+   MY LIBRARY PAGE
+============================================ */
+.my-library-page {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 100px 0 80px;
+}
+
+/* ============================================
+   LOADING STATE
+============================================ */
+.library-loading {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.library-loading p {
+  color: #64748b;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* ============================================
+   LIBRARY HEADER
+============================================ */
+.library-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.header-content-lib {
+  margin-bottom: 30px;
+}
+
+.header-icon-lib {
+  font-size: 3rem;
+  color: #667eea;
+  margin-bottom: 15px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.library-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 15px;
+}
+
+.library-subtitle {
+  font-size: 1.1rem;
+  color: #64748b;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ============================================
+   HEADER ACTIONS
+============================================ */
+.header-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.btn-create-game {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-create-game:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+}
+
+.btn-browse-games {
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-browse-games:hover {
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   LIBRARY STATS
+============================================ */
+.library-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 25px 20px;
+  border-radius: 15px;
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: #667eea;
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #667eea;
+  margin: 0 0 8px 0;
+}
+
+.stat-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ============================================
+   BARRA DE BÚSQUEDA Y FILTROS SUPERIOR
+============================================ */
+.filters-top-bar-lib {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  padding: 0 15px;
+}
+
+.search-box-lib {
+  position: relative;
+  flex: 1;
+  max-width: 600px;
+}
+
+.search-icon-lib {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 18px;
+}
+
+.search-input-lib {
+  width: 100%;
+  padding: 12px 45px 12px 45px;
+  border-radius: 50px;
+  border: 2px solid #e2e8f0;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.search-input-lib:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+  outline: none;
+}
+
+.clear-search-btn-lib {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  padding: 5px;
+  background: transparent;
+  border: none;
+}
+
+.clear-search-btn-lib:hover {
+  color: #dc3545;
+}
+
+.filters-actions-lib {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.results-badge-lib {
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+}
+
+.clear-all-btn-lib {
+  border-radius: 50px;
+  font-weight: 600;
+  padding: 8px 20px;
+}
+
+/* ============================================
+   SIDEBAR DE FILTROS
+============================================ */
+.filters-sidebar-lib {
+  margin-bottom: 30px;
+}
+
+.filters-card-lib {
+  background: white;
+  border-radius: 20px;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: sticky;
+  top: 100px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.filters-header-lib {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #667eea;
+}
+
+.filters-title-lib {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.filters-title-lib svg {
+  color: #667eea;
+}
+
+.filter-label-lib {
+  font-weight: 600;
+  color: #334155;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.filter-select-lib,
+.filter-input-lib {
+  border-radius: 10px;
+  border: 2px solid #e2e8f0;
+  padding: 10px 12px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.filter-select-lib:focus,
+.filter-input-lib:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  outline: none;
+}
+
+.filter-select-lib:hover,
+.filter-input-lib:hover {
+  border-color: #94a3b8;
+}
+
+/* Scroll personalizado para filtros */
+.filters-card-lib::-webkit-scrollbar {
+  width: 6px;
+}
+
+.filters-card-lib::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.filters-card-lib::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.filters-card-lib::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ============================================
+   EMPTY LIBRARY
+============================================ */
+.empty-library,
+.empty-library-filtered {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f8fafc;
+  border-radius: 20px;
+  border: 2px dashed #cbd5e1;
+  margin: 40px 0;
+}
+
+.empty-icon-lib {
+  font-size: 5rem;
+  color: #cbd5e1;
+  margin-bottom: 20px;
+}
+
+.empty-library h3,
+.empty-library-filtered h3 {
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.empty-library p,
+.empty-library-filtered p {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+.empty-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   LIBRARY GRID
+============================================ */
+.library-grid {
+  margin-top: 20px;
+}
+
+.library-grid .col {
+  display: flex;
+}
+
+.library-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #e2e8f0;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #ffffff;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.library-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+  border-color: #667eea;
+}
+
+/* ============================================
+   PERSONAL BADGE
+============================================ */
+.personal-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
+}
+
+/* ============================================
+   CARD IMAGE - ALTURA FIJA
+============================================ */
+.card-image-lib {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-image-lib img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.library-card:hover .card-image-lib img {
+  transform: scale(1.1);
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  z-index: 5;
+}
+
+/* ============================================
+   CARD BODY - ALTURA CONSISTENTE
+============================================ */
+.library-card-body {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.game-title-lib {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 52px; /* Altura fija para 2 líneas */
+}
+
+/* ============================================
+   GAME META - ALTURA FIJA
+============================================ */
+.game-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 15px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  min-height: 120px; /* Altura fija */
+}
+
+.meta-item {
+  font-size: 0.85rem;
+  color: #475569;
+  display: flex;
+  justify-content: space-between;
+}
+
+.meta-item strong {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.meta-item.rating {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+/* ============================================
+   CARD ACTIONS - BOTONES AL FONDO
+============================================ */
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto; /* Empuja al fondo */
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  min-width: fit-content;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   RESPONSIVE - TABLETS
+============================================ */
+@media (max-width: 992px) {
+  .my-library-page {
+    padding: 90px 0 60px;
+  }
+
+  .library-title {
+    font-size: 2rem;
+  }
+
+  .library-subtitle {
+    font-size: 1rem;
+  }
+
+  .stat-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .filters-top-bar-lib {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box-lib {
+    max-width: 100%;
+  }
+
+  .filters-actions-lib {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .filters-card-lib {
+    position: static;
+    max-height: none;
+    margin-bottom: 30px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+============================================ */
+@media (max-width: 768px) {
+  .my-library-page {
+    padding: 85px 0 50px;
+  }
+
+  .library-header {
+    margin-bottom: 40px;
+  }
+
+  .library-title {
+    font-size: 1.8rem;
+  }
+
+  .library-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .header-icon-lib {
+    font-size: 2.5rem;
+  }
+
+  .header-actions {
+    flex-direction: column;
+  }
+
+  .btn-create-game,
+  .btn-browse-games {
+    width: 100%;
+  }
+
+  .library-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search-input-lib {
+    padding: 10px 40px 10px 40px;
+    font-size: 14px;
+  }
+
+  .results-badge-lib {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  .filters-card-lib .card-body {
+    padding: 15px;
+  }
+
+  .filter-label-lib {
+    font-size: 13px;
+  }
+
+  .filter-select-lib,
+  .filter-input-lib {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .card-image-lib {
+    height: 220px;
+  }
+
+  .game-title-lib {
+    font-size: 1rem;
+    min-height: 48px;
+  }
+
+  .game-meta {
+    padding: 12px;
+    min-height: 110px;
+  }
+
+  .meta-item {
+    font-size: 0.8rem;
+  }
+
+  .card-actions {
+    flex-direction: column;
+  }
+
+  .action-btn {
+    width: 100%;
+  }
+
+  .empty-library,
+  .empty-library-filtered {
+    padding: 60px 20px;
+  }
+
+  .empty-library h3,
+  .empty-library-filtered h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE PEQUEÑO
+============================================ */
+@media (max-width: 576px) {
+  .library-title {
+    font-size: 1.5rem;
+  }
+
+  .library-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 15px 10px;
+  }
+
+  .stat-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .stat-card p {
+    font-size: 0.8rem;
+  }
+
+  .search-input-lib {
+    padding: 8px 35px 8px 35px;
+  }
+
+  .filters-actions-lib {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .clear-all-btn-lib {
+    width: 100%;
+  }
+
+  .card-image-lib {
+    height: 200px;
+  }
+
+  .library-card-body {
+    padding: 15px;
+  }
+
+  .game-title-lib {
+    font-size: 0.95rem;
+    min-height: 45px;
+  }
+
+  .game-meta {
+    padding: 10px;
+    gap: 6px;
+    min-height: 105px;
+  }
+
+  .meta-item {
+    font-size: 0.75rem;
+  }
+}
+
+/* ============================================
+   ANIMACIONES
+============================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.library-grid {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* ============================================
+   UTILIDADES
+============================================ */
+.text-primary {
+  color: #667eea !important;
+}
+
+.bg-primary {
+  background-color: #667eea !important;
+}

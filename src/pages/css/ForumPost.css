@@ -1,0 +1,30 @@
+.post-view-container {
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+.post-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #2c3e50;
+}
+
+.breadcrumb {
+  background: transparent;
+  padding: 0;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .post-view-container {
+    padding-top: 70px;
+  }
+}

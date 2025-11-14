@@ -1,0 +1,52 @@
+.forum-container {
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+.forum-header h1 {
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.forum-filters {
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.post-card {
+  transition: all 0.3s ease;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+}
+
+.hover-shadow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15) !important;
+}
+
+.category-badge {
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .forum-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .post-card .card-body {
+    padding: 1rem;
+  }
+}
